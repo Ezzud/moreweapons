@@ -1,16 +1,12 @@
 package fr.ezzud.moreweapons.weapons;
 
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Snowball;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.metadata.FixedMetadataValue;
-import org.bukkit.util.Vector;
-
 import fr.ezzud.moreweapons.MoreWeapons;
-import fr.ezzud.moreweapons.others.InventoryUtil;
+import fr.ezzud.moreweapons.others.MachineGunShoot;
+import fr.ezzud.moreweapons.utils.InventoryUtil;
 
 
 public class MachineGun {
@@ -37,10 +33,6 @@ public class MachineGun {
 	
 	
 	public static void action(Player player) {
-		Vector playerDirection = player.getLocation().getDirection();
-		Snowball bullet = player.launchProjectile(Snowball.class, playerDirection);
-		player.getLocation().getWorld().playSound(player.getLocation(), Sound.ENTITY_ARROW_SHOOT, 1, 1); 
-		bullet.setVelocity(bullet.getVelocity().multiply(3));
-		bullet.setMetadata("bullet", new FixedMetadataValue(plugin, 1));
+		MachineGunShoot.run(player);
 	}
 }

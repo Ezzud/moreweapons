@@ -20,6 +20,8 @@ public class StaffLootRemover implements Listener {
 		   Entity entity = event.getEntity();
 		   if(entity.hasMetadata("spawnedEntity")) {
 			   event.getDrops().removeAll(event.getDrops());
-			  }
+		   }
+		   
+		   
 	   }
 }

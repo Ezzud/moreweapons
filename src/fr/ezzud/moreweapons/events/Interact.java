@@ -40,7 +40,11 @@ public class Interact implements Listener {
 				 int modelData = meta.getCustomModelData();
 				 switch(modelData) {
 				 	case 1232401:
-				 		SummonerStaff.action(player);
+				 		if(player.isSneaking()) {
+				 			SummonerStaff.secondAction(player);
+				 		} else {
+				 			SummonerStaff.action(player);
+				 		}
 				 		break;
 				 	case 1232402:
 				 		MachineGun.action(player);

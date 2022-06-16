@@ -18,7 +18,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 import fr.ezzud.moreweapons.MoreWeapons;
-import fr.ezzud.moreweapons.others.InventoryUtil;
+import fr.ezzud.moreweapons.utils.InventoryUtil;
 import net.minecraft.server.v1_16_R3.PacketPlayOutEntityDestroy;
 
 

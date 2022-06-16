@@ -11,7 +11,7 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.util.Vector;
 
 import fr.ezzud.moreweapons.MoreWeapons;
-import fr.ezzud.moreweapons.others.InventoryUtil;
+import fr.ezzud.moreweapons.utils.InventoryUtil;
 
 
 public class Laser {
