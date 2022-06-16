@@ -47,10 +47,10 @@ public class FishLauncherUtil {
 		return entity;
 	}
 	
-	
+	@SuppressWarnings("deprecation")
 	public static Runnable startBomb(ItemStack item, ItemMeta meta, Entity entity, World world, Location location, Boolean hasDelay) {
 		Runnable runnable2 = new Runnable() {
-			@SuppressWarnings("deprecation")
+			
 			@Override
 			public void run() {
 				if(hasDelay) {
@@ -133,10 +133,8 @@ public class FishLauncherUtil {
 	
 	@SuppressWarnings("deprecation")
 	public static void launchSingleFish(ItemStack item, ItemMeta meta, Player player) {
-		Location loc = player.getLocation();
-		loc.add(0, 1.5, 0);		
 		Vector playerDirection = player.getLocation().getDirection();
-		Entity entity = FishLauncherUtil.spawnFish(player, loc.getX(), loc.getZ(), loc.getY());
+		Entity entity = FishLauncherUtil.spawnFish(player, 0, 0, 1.5);
 		
 		entity.setMetadata("fishBomb", new FixedMetadataValue(plugin, 1));
 		entity.setVelocity(playerDirection.multiply(3));

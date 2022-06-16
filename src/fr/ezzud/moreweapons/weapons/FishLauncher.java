@@ -40,7 +40,7 @@ public class FishLauncher {
 		if(InventoryUtil.isDamaged(meta)) {
 			return;
 		}
-		FishLauncherUtil.launchSingleFish(item, meta,player);
+		FishLauncherUtil.launchSingleFish(item, meta, player);
 		world.playSound(player.getLocation(), Sound.UI_STONECUTTER_TAKE_RESULT, 1, 1);
 		
 		
